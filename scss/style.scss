@@ -1,0 +1,72 @@
+@import "_seccion1.scss";
+@import "_portafolio.scss";
+@import "_servicios.scss";
+@import "_formulario.scss";
+
+
+@mixin titulos{
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8vh;
+    text-align: justify;
+    margin-left: 5%;
+    padding-top: 20%;
+    padding-bottom: 40%;
+}
+@mixin fondo{
+    
+        background: linear-gradient(45deg, #0eecc3, #0e9ed7,#5e9aee,#46ebc4);
+        background-size: 300% 300%;
+        animation: color 6s ease-in-out infinite;
+
+@keyframes color{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+}
+@mixin footer{
+    background-color: black;
+    text-align: center;
+    width: 100%;
+    font-size: 2vh;
+    font-family: monospace;
+}
+
+@mixin navbar{
+    display: inline-block;
+    font-size: 3vh;
+    font-family: monospace;
+    width: 100%;
+    padding: 2%;
+    
+
+    ul{
+        padding: 2%;
+        margin: 2%;
+        
+    }
+
+    a:hover{
+        color: rgb(255, 255, 255);
+        background-color: rgb(0, 0, 0);
+    }
+}
+
+.navbar{
+    @include navbar()
+}
+footer{
+    @include footer()
+}
+
+body{
+    @include fondo()
+}
+
